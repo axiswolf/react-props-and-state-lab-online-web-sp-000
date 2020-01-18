@@ -7,13 +7,13 @@ class App extends React.Component {
   constructor() {
     super()
 
-  //   this.state = {
-  //     pets: [],
-  //     filters: {
-  //       type: selectedType.target.value
-  //     }
-  //   }
-  // }
+     this.state = {
+       pets: [],
+       filters: {
+         type: selectedType.target.value
+       }
+     }
+   }
 
   setPets = (objs) => {
     this.setState({
@@ -47,7 +47,7 @@ onAdoptPet = (id) => {
     pets: this.state.pets.map(pet=> pet.id === id ? Object.assign({}, pet, {isAdopted: true}) : pet)
   })
 }
-}
+
   render() {
     return (
       <div className="ui container">
