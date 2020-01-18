@@ -7,14 +7,22 @@ class App extends React.Component {
   constructor() {
     super()
 
-    this.state = {
-      pets: [],
+  //   this.state = {
+  //     pets: [],
+  //     filters: {
+  //       type: selectedType.target.value
+  //     }
+  //   }
+  // }
+
+  onChangeType = (selectedType) => {
+    this.setState({
       filters: {
         type: selectedType.target.value
       }
-    }
+    })
   }
-
+  
 onFindPetsClick = () => {
   let endpoint = '/api/pets'
   if (this.state.filters.type !== "all") {
