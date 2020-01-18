@@ -40,6 +40,7 @@ onAdoptPet = (id) => {
     pets: this.state.pets.map(pet=> pet.id === id ? Object.assign({}, pet, {isAdopted: true}) : pet)
   })
 }
+}
   render() {
     return (
       <div className="ui container">
