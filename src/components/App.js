@@ -22,7 +22,7 @@ class App extends React.Component {
       }
     })
   }
-  
+
 onFindPetsClick = () => {
   let endpoint = '/api/pets'
   if (this.state.filters.type !== "all") {
