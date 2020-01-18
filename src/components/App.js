@@ -21,7 +21,7 @@ class App extends React.Component {
       pets: objs
     })
   }
-  
+
   onChangeType = (selectedType) => {
     this.setState({
       filters: {
