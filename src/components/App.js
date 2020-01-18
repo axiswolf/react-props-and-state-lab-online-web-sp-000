@@ -42,11 +42,18 @@ onFindPetsClick = () => {
   }))
 }
 
-onAdoptPet = (id) => {
-  this.setState({
-    pets: this.state.pets.map(pet=> pet.id === id ? Object.assign({}, pet, {isAdopted: true}) : pet)
-  })
-}
+// onAdoptPet = (id) => {
+//   this.setState({
+//     pets: this.state.pets.map(pet=> pet.id === id ? Object.assign({}, pet, {isAdopted: true}) : pet)
+//   })
+// }
+
+onAdoptPet = petId => {
+  const pets = this.state.pets.map(pet => {
+    return pet.id === petId ? {...pet, isAdopted: true} : pet;
+  });
+  this.setState({pets: pets});
+};
 
   render() {
     return (
