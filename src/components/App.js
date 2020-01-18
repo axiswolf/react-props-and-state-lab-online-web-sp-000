@@ -21,7 +21,7 @@ onFindPetsClick = () => {
     endpoint += `?type=${this.state.filters.type}`
   }
   fetch(endpoint)
-  .then (resp => resp.json())
+  .then (res => res.json())
   .then (pets => this.setState({
     pets: pets
   }))
